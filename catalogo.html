@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Catálogo de joyería</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Jost:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  /* Colores: cámbialos aquí y se actualiza toda la página */
+  :root {
+    --fondo: #fcf8f7;
+    --tarjeta: #ffffff;
+    --texto: #3b2a35;
+    --suave: #85727c;
+    --dorado: #b08a45;
+    --rosa: #f3e1e1;
+  }
+  * { box-sizing: border-box; margin: 0; }
+  body { font-family: "Jost", system-ui, sans-serif; background: var(--fondo); color: var(--texto); line-height: 1.6; }
+  header { text-align: center; padding: 56px 20px 28px; }
+  header h1 { font-family: "Cormorant Garamond", Georgia, serif; font-weight: 600; font-size: clamp(2.2rem, 7vw, 3.6rem); letter-spacing: .02em; }
+  header p { color: var(--suave); margin-top: 6px; }
+  nav { position: sticky; top: 0; z-index: 5; background: rgba(252,248,247,.94); backdrop-filter: blur(6px); display: flex; justify-content: center; gap: 8px; flex-wrap: wrap; padding: 12px 16px; border-bottom: 1px solid var(--rosa); }
+  nav a { color: var(--texto); text-decoration: none; padding: 6px 16px; border-radius: 999px; font-size: .95rem; }
+  nav a:hover, nav a:focus-visible { background: var(--rosa); outline: none; }
+  main { max-width: 1100px; margin: 0 auto; padding: 0 20px 40px; }
+  section { padding-top: 48px; scroll-margin-top: 60px; }
+  h2 { font-family: "Cormorant Garamond", Georgia, serif; font-weight: 600; font-size: 2rem; margin-bottom: 20px; padding-bottom: 8px; border-bottom: 2px solid var(--dorado); display: inline-block; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 24px; }
+  .producto { background: var(--tarjeta); border-radius: 14px; overflow: hidden; border: 1px solid var(--rosa); }
+  .producto img { display: block; width: 100%; aspect-ratio: 1 / 1; object-fit: cover; }
+  .info { padding: 16px 18px 20px; }
+  .nombre { font-family: "Cormorant Garamond", Georgia, serif; font-weight: 600; font-size: 1.3rem; line-height: 1.25; }
+  .precio { color: var(--dorado); font-weight: 500; margin: 4px 0 8px; }
+  .descripcion { color: var(--suave); font-size: .92rem; }
+  footer { text-align: center; color: var(--suave); padding: 36px 20px 48px; border-top: 1px solid var(--rosa); }
+  @media (max-width: 480px) { .grid { grid-template-columns: repeat(2, 1fr); gap: 14px; } .info { padding: 12px; } .nombre { font-size: 1.1rem; } }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Nombre de tu tienda</h1>
+  <p>Escribe aquí una frase corta sobre tu joyería.</p>
+</header>
+
+<nav><a href="#aretes">Aretes</a><a href="#anillos">Anillos</a><a href="#pulseras">Pulseras</a><a href="#conjuntos">Conjuntos</a></nav>
+
+<main>
+  <section id="aretes">
+    <h2>Aretes</h2>
+    <div class="grid">
+      <!-- PRODUCTO: copia y pega este bloque para agregar más -->
+      <article class="producto">
+        <img src="imagenes/aretes-verde.jpg" alt="Argollas con piedra verde y brillantes" loading="lazy">
+        <div class="info">
+          <h3 class="nombre">Nombre del producto</h3>
+          <p class="precio">$ 00.00</p>
+          <p class="descripcion">Escribe aquí la descripción: material, medidas, colores disponibles.</p>
+        </div>
+      </article>
+
+      <!-- PRODUCTO: copia y pega este bloque para agregar más -->
+      <article class="producto">
+        <img src="imagenes/aretes-negro.jpg" alt="Argollas con piedra negra y brillantes" loading="lazy">
+        <div class="info">
+          <h3 class="nombre">Nombre del producto</h3>
+          <p class="precio">$ 00.00</p>
+          <p class="descripcion">Escribe aquí la descripción: material, medidas, colores disponibles.</p>
+        </div>
+      </article>
+
+      <!-- PRODUCTO: copia y pega este bloque para agregar más -->
+      <article class="producto">
+        <img src="imagenes/aretes-flor.jpg" alt="Argollas en forma de flor rosada" loading="lazy">
+        <div class="info">
+          <h3 class="nombre">Nombre del producto</h3>
+          <p class="precio">$ 00.00</p>
+          <p class="descripcion">Escribe aquí la descripción: material, medidas, colores disponibles.</p>
+        </div>
+      </article>
+
+      <!-- PRODUCTO: copia y pega este bloque para agregar más -->
+      <article class="producto">
+        <img src="imagenes/aretes-abeja.jpg" alt="Argollas con abeja de colores" loading="lazy">
+        <div class="info">
+          <h3 class="nombre">Nombre del producto</h3>
+          <p class="precio">$ 00.00</p>
+          <p class="descripcion">Escribe aquí la descripción: material, medidas, colores disponibles.</p>
+        </div>
+      </article>
+
+      <!-- PRODUCTO: copia y pega este bloque para agregar más -->
+      <article class="producto">
+        <img src="imagenes/aretes-buho.jpg" alt="Argollas con búho de piedra negra" loading="lazy">
+        <div class="info">
+          <h3 class="nombre">Nombre del producto</h3>
+          <p class="precio">$ 00.00</p>
+          <p class="descripcion">Escribe aquí la descripción: material, medidas, colores disponibles.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section id="anillos">
+    <h2>Anillos</h2>
+    <div class="grid">
+      <!-- PRODUCTO: copia y pega este bloque para agregar más -->
+      <article class="producto">
+        <img src="imagenes/anillo-corazones.jpg" alt="Anillo dorado de corazones calados" loading="lazy">
+        <div class="info">
+          <h3 class="nombre">Nombre del producto</h3>
+          <p class="precio">$ 00.00</p>
+          <p class="descripcion">Escribe aquí la descripción: material, medidas, colores disponibles.</p>
+        </div>
+      </article>
+      <!-- PRODUCTO: copia y pega este bloque para agregar más -->
+      <article class="producto">
+        <img src="imagenes/anillo-abierto.jpg" alt="Anillo dorado abierto de diseño moderno" loading="lazy">
+        <div class="info">
+          <h3 class="nombre">Nombre del producto</h3>
+          <p class="precio">$ 00.00</p>
+          <p class="descripcion">Escribe aquí la descripción: material, medidas, colores disponibles.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section id="pulseras">
+    <h2>Pulseras</h2>
+    <div class="grid">
+      <!-- PRODUCTO: copia y pega este bloque para agregar más -->
+      <article class="producto">
+        <img src="imagenes/pulsera-blanca.jpg" alt="Pulsera dorada con piedras transparentes" loading="lazy">
+        <div class="info">
+          <h3 class="nombre">Nombre del producto</h3>
+          <p class="precio">$ 00.00</p>
+          <p class="descripcion">Escribe aquí la descripción: material, medidas, colores disponibles.</p>
+        </div>
+      </article>
+
+      <!-- PRODUCTO: copia y pega este bloque para agregar más -->
+      <article class="producto">
+        <img src="imagenes/pulsera-azul.jpg" alt="Pulsera de flores azules" loading="lazy">
+        <div class="info">
+          <h3 class="nombre">Nombre del producto</h3>
+          <p class="precio">$ 00.00</p>
+          <p class="descripcion">Escribe aquí la descripción: material, medidas, colores disponibles.</p>
+        </div>
+      </article>
+
+      <!-- PRODUCTO: copia y pega este bloque para agregar más -->
+      <article class="producto">
+        <img src="imagenes/pulsera-colores.jpg" alt="Pulsera de flores de colores" loading="lazy">
+        <div class="info">
+          <h3 class="nombre">Nombre del producto</h3>
+          <p class="precio">$ 00.00</p>
+          <p class="descripcion">Escribe aquí la descripción: material, medidas, colores disponibles.</p>
+        </div>
+      </article>
+
+      <!-- PRODUCTO: copia y pega este bloque para agregar más -->
+      <article class="producto">
+        <img src="imagenes/pulsera-perla.jpg" alt="Pulsera con círculos y piedras nacaradas" loading="lazy">
+        <div class="info">
+          <h3 class="nombre">Nombre del producto</h3>
+          <p class="precio">$ 00.00</p>
+          <p class="descripcion">Escribe aquí la descripción: material, medidas, colores disponibles.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section id="conjuntos">
+    <h2>Conjuntos</h2>
+    <div class="grid">
+      <!-- PRODUCTO: copia y pega este bloque para agregar más -->
+      <article class="producto">
+        <img src="imagenes/conjunto-abeja.jpg" alt="Conjunto de abeja: collar y aretes" loading="lazy">
+        <div class="info">
+          <h3 class="nombre">Nombre del producto</h3>
+          <p class="precio">$ 00.00</p>
+          <p class="descripcion">Escribe aquí la descripción: material, medidas, colores disponibles.</p>
+        </div>
+      </article>
+
+      <!-- PRODUCTO: copia y pega este bloque para agregar más -->
+      <article class="producto">
+        <img src="imagenes/conjunto-corazon.jpg" alt="Conjunto de corazón: collar y aretes" loading="lazy">
+        <div class="info">
+          <h3 class="nombre">Nombre del producto</h3>
+          <p class="precio">$ 00.00</p>
+          <p class="descripcion">Escribe aquí la descripción: material, medidas, colores disponibles.</p>
+        </div>
+      </article>
+
+      <!-- PRODUCTO: copia y pega este bloque para agregar más -->
+      <article class="producto">
+        <img src="imagenes/conjunto-hoja.jpg" alt="Conjunto de hoja: collar y aretes" loading="lazy">
+        <div class="info">
+          <h3 class="nombre">Nombre del producto</h3>
+          <p class="precio">$ 00.00</p>
+          <p class="descripcion">Escribe aquí la descripción: material, medidas, colores disponibles.</p>
+        </div>
+      </article>
+
+      <!-- PRODUCTO: copia y pega este bloque para agregar más -->
+      <article class="producto">
+        <img src="imagenes/conjunto-mono.jpg" alt="Conjunto de moño: collar y aretes" loading="lazy">
+        <div class="info">
+          <h3 class="nombre">Nombre del producto</h3>
+          <p class="precio">$ 00.00</p>
+          <p class="descripcion">Escribe aquí la descripción: material, medidas, colores disponibles.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>Pedidos y consultas: escribe aquí tu WhatsApp o contacto.</p>
+</footer>
+
+</body>
+</html>
